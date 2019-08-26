@@ -1,0 +1,232 @@
+/*********************************************/
+/* Components table */
+/*********************************************/
+/*** テーブル風リスト 01 ***/
+.c-tbl-list-type01 {
+	width: 100%;
+}
+.c-tbl-list-type01__tr {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid $border-color;
+	@include media(sp) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	&:last-child {
+		border-bottom: 1px solid $border-color;
+	}
+}
+.c-tbl-list-type01__th,
+.c-tbl-list-type01__td {
+	overflow: hidden;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.c-tbl-list-type01__th {
+	padding: 15px;
+	width: 180px;
+	border-right: 1px solid $border-color;
+	@include media(sp) {
+		padding: 10px;
+		width: 90px;
+		font-size: rem(12px);
+	}
+}
+.c-tbl-list-type01__td {
+	flex: 1;
+	padding: 15px 15px 15px 30px;
+	color: $txt-sub;
+	@include media(sp) {
+		padding: 10px;
+		font-size: rem(12px);
+	}
+}
+
+
+/*** テーブル風リスト 02 ***/
+.c-tbl-list-type02 {
+	width: 100%;
+}
+.c-tbl-list-type02__tr {
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px solid $border-color;
+	&:last-child {
+		border-bottom: 1px solid $border-color;
+	}
+	@include media(sp) {
+		display: block;
+		margin-bottom: 30px;
+		padding-top: 0;
+		padding-bottom: 0;
+		border-top: 0;
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}
+.c-tbl-list-type02__th,
+.c-tbl-list-type02__td {
+	overflow: hidden;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.c-tbl-list-type02__th {
+	padding: 15px;
+	width: 180px;
+	border-right: 1px solid $border-color;
+	@include media(sp) {
+		margin-bottom: 10px;
+		padding: 0;
+		width: auto;
+		border-right: 0;
+		color: #000000;
+		text-align: left;
+	}
+}
+.c-tbl-list-type02__td {
+	flex: 1;
+	padding: 15px;
+	@include media(sp) {
+		padding: 0;
+	}
+}
+
+
+
+/*** ２項目テーブル風リスト ***/
+.c-tbl-second-list {
+	border-top: 1px solid $border-color;
+	@include media(sp) {
+		border-top: 0;
+	}
+}
+.c-tbl-second-list__tr {
+	display: flex;
+	flex-wrap: wrap;
+	border-bottom: 1px solid $border-color;
+}
+.c-tbl-second-list__th {
+	display: flex;
+	align-items: center;
+	padding: 15px;
+	width: 240px;
+	background: #cccccc;
+	@include media(sp) {
+		display: block;
+		padding: 5px 15px;
+		width: 100%;
+		border-bottom: 0;
+		font-size: rem(12px);
+	}
+}
+.c-tbl-second-list__ttl {
+	font-weight: bold;
+	color: #ffffff;
+}
+.c-tbl-second-list__td {
+	flex: 1;
+	padding: 15px;
+	border-right: 1px solid $border-color;
+	@include media(sp) {
+		padding: 10px 15px;
+		font-size: rem(12px);
+	}
+	&.is-02 {
+		border-right: 0;
+	}
+}
+
+
+
+/*** 横並びテーブル風リスト ***/
+.c-tbl-list-double {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	@include media(sp) {
+		display: block;
+	}
+}
+.c-tbl-list-double__tr {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: -1px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 1px solid $border-color;
+	width: 50%;
+	@include media(sp) {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-left: 0;
+		border-right: 0;
+		width: auto;
+	}
+	&:nth-child(even) {
+		border-left: 0;
+	}
+}
+.c-tbl-list-double__th,
+.c-tbl-list-double__td {
+	overflow: hidden;
+	word-wrap: break-word;
+	word-break: break-all;
+}
+.c-tbl-list-double__th {
+	padding: 10px 15px;
+	width: 120px;
+	border-right: 1px solid $border-color;
+	@include media(sp) {
+		padding: 5px 10px;
+		width: 90px;
+		font-size: rem(12px);
+	}
+}
+.c-tbl-list-double__td {
+	flex: 1;
+	padding: 10px 15px;
+	color: $txt-sub;
+	@include media(sp) {
+		padding: 5px 10px;
+		font-size: rem(12px);
+	}
+}
+
+
+
+/*************** table ***************/
+.c-tbl {
+	width: 100%;
+	@include media(sp) {
+		font-size: rem(12px);
+	}
+}
+.c-tbl__th {
+	padding: 10px 20px;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	background: $base-color2;
+	width: 165px;
+	vertical-align: top;
+	@include media(sp) {
+		padding: 5px 10px;
+		width: 105px;
+	}
+}
+.c-tbl__td {
+	padding: 10px 20px;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	background: #ffffff;
+	@include media(sp) {
+		padding: 5px 10px;
+	}
+}
+
+

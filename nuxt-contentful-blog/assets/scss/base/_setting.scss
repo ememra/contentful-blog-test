@@ -1,0 +1,104 @@
+//色
+$txt-main :#393939;//基本文字色
+$txt-sub :#696969;//補足文字色
+$link-color :#007ae5;//リンク色
+$link-hover :#666666;//リンク色のせた時
+$link-active :#666666;//リンク色おした時
+$link-visited :#6d3fc0;//リンク色訪問済み
+
+$main-color :#949eff;//メインカラー
+$base-color :#ffffff;//ベース・背景色
+$base-color2 :#EEEEEE;//ベース・背景色
+$accent-color :#65d9eb;//アクセントカラー
+$border-color :#dddddd;//ボーダーカラー
+
+$danger-color :#ff0000;//危険
+$warning-color :#8a6d3b;//注意
+$success-color :#3c763d;//成功
+$info-color :#31708f;//情報
+
+//フォント
+@function rem($px) {
+	@return ($px / 16px) * 1rem;
+}
+$gothic :YakuHanJPs,'Roboto',verdana,"ヒラギノ角ゴシック","Hiragino Sans","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",sans-serif;//ゴシック
+$gothic-noto :YakuHanJPs,"Noto Sans Japanese", sans-serif;//ゴシック
+$gothic-rounded :'M PLUS Rounded 1c', sans-serif;//ゴシック
+$mincho :YakuHanMPs,"ヒラギノ明朝 ProN W3","Hiragino Mincho ProN","游明朝",YuMincho, serif;//明朝
+$mincho-sawarabi :YakuHanMPs,'Sawarabi Mincho', serif;//明朝
+$mincho-noto :YakuHanMPs,'Noto Serif JP', serif;//明朝
+
+$font-size-pc :rem(16px);
+$font-size-sp :rem(16px);
+$line-height: 1.8;
+
+//マージン
+$mbxs : 5px;
+$mbs : 15px;
+$mbm : 30px;
+$mbl : 60px;
+$mbxl : 120px;
+
+//角丸
+$radius : 10px;
+$radius-s : 5px;
+
+//シャドウ
+$shadow : 0 0 15px rgba(#1c5159,0.15);
+
+//アニメーション
+$transition : all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+
+//ブレイクポイント
+$bp-ip5: 320px;
+$bp-min-ip5: 321px;
+$bp-sp: 767px;
+$bp-min-sp: 768px;
+$bp-tb: 960px;
+$bp-min-tb: 961px;
+$bp-pc: 1280px;
+$bp-min-pc: 1281px;
+
+// メディアクエリ用のミックスイン
+@mixin media($media-width) {
+	@if $media-width == ip5 {
+		@media only screen and (max-width: $bp-ip5) {
+			@content;
+		}
+	}
+	@if $media-width == min-ip5 {
+		@media only screen and (min-width: $bp-min-ip5) {
+			@content;
+		}
+	}
+	@if $media-width == sp {
+		@media only screen and (max-width: $bp-sp) {
+			@content;
+		}
+	}
+	@if $media-width == min-sp {
+		@media only screen and (min-width: $bp-min-sp) {
+			@content;
+		}
+	}
+	@if $media-width == tb {
+		@media only screen and (max-width: $bp-tb) {
+			@content;
+		}
+	}
+	@if $media-width == min-tb {
+		@media only screen and (min-width: $bp-min-tb) {
+			@content;
+		}
+	}
+	@if $media-width == pc {
+		@media only screen and (max-width: $bp-pc) {
+			@content;
+		}
+	}
+	@if $media-width == min-pc {
+		@media only screen and (min-width: $bp-min-pc) {
+			@content;
+		}
+	}
+}

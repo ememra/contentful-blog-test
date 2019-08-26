@@ -1,0 +1,61 @@
+/*************** フォーム ***************/
+@include placeholderColor(#aaaaaa);
+
+button {
+	font-family: $gothic;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+	padding: 10px 5px;
+	line-height: 1.4;
+	min-height: 46px;
+	border: 1px solid #aaaaaa;
+	border-radius: 3px;
+	background: #fafafa;
+	color: #111111;
+	font-size: rem(16px);
+	font-family: $gothic;
+	vertical-align: middle;
+	transition: all 0.2s ease;
+	&:hover {
+		border-color: #888888;
+		background: #ffffff;
+		color: #333333;
+	}
+	&:focus {
+		border-color: #67CBDF;
+		background: #ffffff;
+		color: #333333;
+	}
+	&:disabled {
+		border-color: #888888;
+		background: #EBEBE4;
+		color: #777777;
+		cursor: not-allowed;
+	}
+}
+input[type="text"],
+input[type="password"],
+textarea {
+	-webkit-appearance: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	position: relative;
+	top: -0.1em;
+	margin: 0 5px 0 0;
+	vertical-align: middle;
+}
+select {
+	max-width: 100%;
+	height: 46px;
+}
+label {
+	cursor: pointer;
+}

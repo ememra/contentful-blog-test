@@ -1,0 +1,203 @@
+/*********************************************/
+/* Utility */
+/*********************************************/
+/* clearfix */
+.u-cl:before,.u-cl:after {content: " ";display: table;}
+.u-cl:after {clear: both;}
+.u-cl {*zoom: 1;}
+
+/* font関連 */
+.u-bold {font-weight: bold !important;}
+.u-through {text-decoration: line-through}
+.u-fss {font-size: 10px !important;}
+.u-fs {font-size: 12px !important;}
+.u-fm {font-size: 14px !important;}
+.u-fl {font-size: 18px !important;}
+.u-fll {font-size: 24px !important;}
+.u-fxl {font-size: 30px !important;}
+
+.u-mincho {font-family: $mincho;}
+.u-mincho-noto {font-family: $mincho-noto;}
+.u-mincho-sawarabi {font-family: $mincho-sawarabi;}
+.u-gothic-noto {font-family: $gothic-noto;}
+.u-gothic-rounded {font-family: $gothic-rounded;}
+
+/* float */
+.u-float-l {float:left;}
+.u-float-r {float:right;}
+
+/* text-align */
+.u-tl {text-align: left !important;}
+.u-tc {text-align: center !important;}
+.u-tr {text-align: right !important;}
+
+/* vertical-align */
+.u-vat {vertical-align: top !important;}
+.u-vam {vertical-align: middle !important;}
+.u-vab {vertical-align: bottom !important;}
+
+/* bottom-margin */
+.u-mb0 {margin-bottom:0px !important;}
+.u-mb5 {margin-bottom:5px !important;}
+.u-mb10 {margin-bottom:10px !important;}
+.u-mb15 {margin-bottom:15px !important;}
+.u-mb20 {margin-bottom:20px !important;}
+.u-mb25 {margin-bottom:25px !important;}
+.u-mb30 {margin-bottom:30px !important;}
+.u-mb35 {margin-bottom:35px !important;}
+.u-mb40 {margin-bottom:40px !important;}
+.u-mb45 {margin-bottom:45px !important;}
+.u-mb50 {margin-bottom:50px !important;}
+.u-mb60 {margin-bottom:60px !important;}
+
+.u-mbxs {margin-bottom: 5px !important;}
+.u-mbss {margin-bottom: 10px !important;}
+.u-mbs {margin-bottom: 15px !important;}
+.u-mbm {margin-bottom: 45px !important;}
+.u-mbl {margin-bottom: 60px !important;}
+.u-mbll {margin-bottom: 120px !important;}
+.u-mbxl {margin-bottom: 240px !important;}
+
+/* padding */
+.u-plrs {padding-left: 10px !important;padding-right: 10px !important;}
+.u-plrm {padding-left: 15px !important;padding-right: 15px !important;}
+
+/* 幅 */
+.u-ws { width: 50px;}
+.u-wm { width: 100px;}
+.u-wl { width: 200px;}
+.u-w-half { width: 50%;}
+.u-w-max { width: 100%;}
+
+/* 色 */
+.u-red {color: #eb0800;}
+
+.u-required {color: #eb0800;}/* 必須 */
+.u-date {color: #888888;}/* 日付 */
+
+.u-dpn {display: none;}
+
+.u-pc-only {display: block;}
+.u-sp-only {display: none;}
+img.u-pc-only {display: inline;}
+img.u-sp-only {display: none;}
+
+@include media(sp) {
+	.u-pc-only {display: none;}
+	.u-sp-only {display: block;}
+	img.u-pc-only {display: none;}
+	img.u-sp-only {display: inline;}
+}
+
+/* opacity */
+.u-opa a img,
+.u-opa-img img,
+.u-opa-box {
+	@include opa(0.7);
+}
+
+.u-spr {
+	overflow: hidden;
+	white-space: nowrap;
+	text-indent: 150%;
+	border: 0;
+	cursor: pointer;
+}
+.u-spr::-moz-focus-inner {
+	padding: 0;
+	border: none;
+}
+.u-pre {
+	padding: 15px;
+	background: #333333;
+	color: #ffffff;
+}
+
+/***** 画像 *****/
+.u-img {
+	margin-bottom: 15px;
+}
+
+/***** テキスト *****/
+.u-txt {
+	line-height: 1.8;
+}
+@include media(sp) {
+	.u-list-txt {
+		padding-left: 0;
+	}
+}
+
+/* input画像ボタンにつける */
+.u-input-img {
+	padding: 0;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+}
+.u-input-img:hover {
+	padding: 0;
+	border: none;
+	box-shadow: none;
+}
+/* inputテキストボタンにつける */
+.u-input-txt {
+	padding: 0;
+	border: none;
+	background: none;
+	box-shadow: none;
+}
+.u-input-txt:hover {
+	padding: 0;
+	border: none;
+	background: none;
+	box-shadow: none;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.u-hidden {
+	overflow: hidden;
+}
+.u-overbg {
+	margin-left: -500%;
+	margin-right: -500%;
+	padding-left: 500%;
+	padding-right: 500%;
+}
+.u-overframe {
+	margin-left: calc(((100vw - 100%) / 2) * -1);
+	margin-right: calc(((100vw - 100%) / 2) * -1);
+}
+
+
+
+/***** iframeの高さをレスポンシブ対応 *****/
+.iframe-content {
+	position: relative;
+	width: 100%;
+	padding: 56.25% 0 0 0;
+}
+.iframe-content iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+/***** 見た目を隠したいとき *****/
+.u-visually-hidden {
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	width: 4px;
+	height: 4px;
+}

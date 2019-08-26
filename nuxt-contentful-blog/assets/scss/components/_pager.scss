@@ -1,0 +1,70 @@
+/*********************************************/
+/* Components pager */
+/*********************************************/
+.pager-list {
+	padding: 20px 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.pager-list__item {
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 45px;
+	line-height: 43px;
+	font-size: rem(18px);
+	font-weight: bold;
+	text-align: center;
+	@include media(sp) {
+		margin-left: 5px;
+		margin-right: 5px;
+		width: 40px;
+		line-height: 38px;
+		font-size: rem(14px);
+	}
+}
+.pager-list__item span {
+	display: block;
+	border: 1px solid $link-color;
+	border-radius: 50%;
+	background: $link-color;
+	color: #ffffff;
+	text-decoration: none;
+}
+.pager-list__link {
+	display: block;
+	border: 1px solid $link-color;
+	border-radius: 50%;
+	background: #ffffff;
+	color: $link-color;
+	text-decoration: none;
+	&:hover {
+		background: $link-color;
+		color: #ffffff;
+		text-decoration: none;
+	}
+}
+
+
+/***** ページャー 四角 *****/
+.pager.is-square {
+	.pager-list__item span {
+		border-radius: 0;
+	}
+	.pager-list__link {
+		border-radius: 0;
+	}
+}
+
+/***** ページャー 角丸 *****/
+.pager.is-square-r {
+	.pager-list__item span {
+		border-radius: 5px;
+	}
+	.pager-list__link {
+		border-radius: 5px;
+	}
+}
+
+
+

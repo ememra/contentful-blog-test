@@ -1,0 +1,45 @@
+/*********************************************/
+/* Components alert */
+/*********************************************/
+.c-alert {
+	padding: 15px;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	&.is-success {//成功
+		color: #3c763d;
+		background-color: #dff0d8;
+		border-color: #d6e9c6;
+	}
+	&.is-info {//情報
+		color: #31708f;
+		background-color: #d9edf7;
+		border-color: #bce8f1;
+	}
+	&.is-warning {//注意
+		color: #8a6d3b;
+		background-color: #fcf8e3;
+		border-color: #faebcc;
+	}
+	&.is-danger {//危険
+		color: #a94442;
+		background-color: #f2dede;
+		border-color: #ebccd1;
+	}
+}
+
+.c-error {
+	margin-top: 5px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	border: 2px solid #ffcfcf;
+	background: #fff0f0;
+	color: #ff0000;
+}
+
+.u-em,
+.c-em {
+	font-weight: bold;
+	color: #ff6600;
+}
+
+

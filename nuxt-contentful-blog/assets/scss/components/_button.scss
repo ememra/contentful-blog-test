@@ -1,0 +1,121 @@
+/*********************************************/
+/* Components button */
+/*********************************************/
+.c-btn {
+	display: inline-block;
+	padding: 13px 30px;
+	border: 2px solid $main-color;
+	border-radius: 30px;
+	min-width: 210px;
+	line-height: 1.4;
+	background: transparent;
+	color: #000000;
+	font-size: rem(21px);
+	cursor: pointer;
+	box-shadow: none;
+	text-align: center;
+	text-decoration: none;
+	transition: $transition;
+	@include arrow-link-right(20,10,2,$main-color);
+	@include media(sp) {
+		min-width: 290px;
+	}
+	&:hover {
+		border-color:$accent-color;
+		background-color: transparent;
+		color: #000000;
+		box-shadow: $shadow;
+		cursor: pointer;
+		text-decoration: none;
+		@include arrow-link-right(17,10,2,$accent-color);
+	}
+}
+
+
+
+/***** ボタン 状態 *****/
+.c-btn {
+	&.is-primary {
+		border-color: transparent;
+		background: $main-color;
+		color: #ffffff;
+		@include arrow-link-right(20,10,1,#ffffff);
+		&.is-no-arrow {
+			@include arrow-link-left(0,0,0,#696969);
+		}
+		&:hover {
+			background: rgba($main-color, 0.9);
+			color: #ffffff;
+		}
+	}
+	&.is-success {
+		border-color: #398439;
+		background: #449d44;
+		color: #ffffff;
+		&:hover {
+			background: #398439;
+			color: #ffffff;
+		}
+	}
+	&.is-link {
+		border-color: #cccccc;
+		border-width: 1px;
+		background: #ffffff;
+		color: $main-color;
+		&:hover {
+			background: $main-color;
+			color: #ffffff;
+		}
+	}
+	&.is-disable {
+		border-color: #dddddd;
+		background: #e5e5e5;
+		color: #aaaaaa;
+		box-shadow: none;
+		cursor: default;
+	}
+	&.is-arrow {
+		padding-right: 30px;
+		@include arrow-link-right(15,8,2,#666666);
+	}
+	&.is-arrow-bottom {
+		padding-right: 30px;
+		@include arrow-link-bottom(12,8,2,#666666);
+	}
+	&.is-no-arrow {
+		@include arrow-link-left(0,0,0,#696969);
+	}
+	&.is-back {
+		@include arrow-link-left(20,10,1,#696969);
+		&:hover {
+			@include arrow-link-left(20,10,1,#696969);
+		}
+	}
+}
+
+
+/***** ボタン サイズ *****/
+.c-btn {
+	&.is-s {
+		padding: 4px 5px;
+		font-size: rem(12px);
+	}
+	&.is-m {
+		padding: 11px 30px;
+	}
+	&.is-l {
+		padding: 15px 30px;
+		font-size: rem(18px);
+		@include media(sp) {
+			padding: 11px 30px;
+			font-size: rem(16px);
+		}
+	}
+}
+
+
+.c-more {
+	margin-top: 30px;
+	text-align: center;
+}
+

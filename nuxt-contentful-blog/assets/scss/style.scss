@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+@import "base/setting";//変数などの定義。ここにスタイルは書かない
+@import "base/mixin";//ミックスインや@extend
+@import "base/reset";//リセット
+@import "base/form";//フォーム
+@import "base/common";//bodyなどの設定？
+
+//パーツ・コンポーネント
+@import "components/title";//見出し
+@import "components/button";//ボタン
+@import "components/alert";//アラートメッセージ
+@import "components/table";//テーブル
+@import "components/pager";//ページャー
+
+@import "base/utility";//余白など便利なスタイル
+

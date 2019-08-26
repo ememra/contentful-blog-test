@@ -1,0 +1,303 @@
+/**************************************************/
+/* mixin */
+/**************************************************/
+/***** font-size ******/
+@function rem($px) {
+	@return ($px / 16px) * 1rem;
+}
+/**例
+h1 {
+	font-size: rem(24px); // -> 1.5rem
+}
+**/
+
+/***** clearfix ******/
+@mixin cl {
+	*zoom: 1;
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+}
+
+/***** opacity *****/
+@mixin opa($opacity: 0.8,$speed: 0.2,$type: ease) {
+	opacity: 1;
+	filter: alpha(opacity=100);
+	transition: opacity $speed + s $type;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	&:hover {
+		opacity: $opacity;
+		filter: alpha(opacity=($opacity * 100));
+	}
+}
+
+
+/***** placeholder *****/
+@mixin placeholderColor($color) {
+	&:placeholder-shown {
+		color: $color;
+	}
+	&::-webkit-input-placeholder {
+		color:$color;
+	}
+	&:-moz-placeholder {
+		color:$color;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color:$color;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color:$color;
+	}
+}
+
+
+/*************** 矢印 線タイプ ****************/
+@mixin arrow-link-right($position: 15,$size: 6,$width: 2,$color: #666666) {
+	position: relative;
+	&:before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: $position + px;
+		left: auto;
+		margin-top: -($size / 2) + px;
+		width: $size + px;
+		height: $size + px;
+		border-right: $width + px solid $color;
+		border-bottom: $width + px solid $color;
+		transform: rotate(-45deg);
+		transition: all 200ms 0s ease;
+	}
+}
+@mixin arrow-link-left($position: 15,$size: 6,$width: 2,$color: #666666) {
+	position: relative;
+	&:before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: auto;
+		left: $position + px;
+		margin-top: -($size / 2) + px;
+		width: $size + px;
+		height: $size + px;
+		border-right: $width + px solid $color;
+		border-bottom: $width + px solid $color;
+		transform: rotate(135deg);
+		transition: all 200ms 0s ease;
+	}
+}
+@mixin arrow-link-bottom($position: 15,$size: 6,$width: 2,$color: #666666) {
+	position: relative;
+	&:before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: $position + px;
+		margin-top: -($size / 2) + px;
+		width: $size + px;
+		height: $size + px;
+		border-right: $width + px solid $color;
+		border-bottom: $width + px solid $color;
+		transform: rotate(45deg);
+		transition: all 200ms 0s ease;
+	}
+}
+
+
+
+
+/*************** 矢印 線タイプ2重 ****************/
+@mixin arrow-link3-right($position: 15,$size: 6,$width: 2,$color: #666666) {
+	position: relative;
+	&:before,
+	&:after {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: $position + px;
+		left: auto;
+		margin-top: -($size / 2 - 1) + px;
+		width: $size + px;
+		height: $size + px;
+		border-right: $width + px solid $color;
+		border-bottom: $width + px solid $color;
+		transform: rotate(-45deg);
+		transition: all 200ms 0s ease;
+	}
+	&:after {
+		right: ($position - 7) + px;
+	}
+}
+@mixin arrow-link3-left($position: 15,$size: 6,$width: 2,$color: #666666) {
+	position: relative;
+	&:before,
+	&:after {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: auto;
+		left: $position + px;
+		margin-top: -($size / 2) + px;
+		width: $size + px;
+		height: $size + px;
+		border-right: $width + px solid $color;
+		border-bottom: $width + px solid $color;
+		transform: rotate(135deg);
+		transition: all 200ms 0s ease;
+	}
+	&:after {
+		left: ($position - 7) + px;
+	}
+}
+@mixin arrow-link-bottom($position: 15,$size: 6,$width: 2,$color: #666666) {
+	position: relative;
+	&:before {
+		display: block;
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: $position + px;
+		margin-top: -($size / 2) + px;
+		width: $size + px;
+		height: $size + px;
+		border-right: $width + px solid $color;
+		border-bottom: $width + px solid $color;
+		transform: rotate(45deg);
+		transition: all 200ms 0s ease;
+	}
+}
+
+
+/*************** 矢印 塗りタイプ ****************/
+@mixin arrow-link2-right($position: 5,$size: 10,$color: #666666) {
+	position: relative;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		margin-top: -$size + px;
+		margin-left: -$position + px;
+		left: 100%;
+		width: 0px;
+		height: 0px;
+		border: solid transparent;
+		border-left-color: $color;
+		border-width: $size + px;
+	}
+}
+@mixin arrow-link2-left($position: 5,$size: 10,$color: #666666) {
+	position: relative;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		margin-top: -$size + px;
+		margin-right: -$position + px;
+		margin-left: auto;
+		right: 100%;
+		left: auto;
+		width: 0px;
+		height: 0px;
+		border: solid transparent;
+		border-right-color: $color;
+		border-width: $size + px;
+	}
+}
+
+
+
+
+/*************** 吹き出しボックス ****************/
+@mixin arrow-bottom($size: 20,$color: #666666) {
+	position: relative;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 100%;
+		margin-left: -$size + px;
+		left: 50%;
+		width: 0px;
+		height: 0px;
+		border: solid transparent;
+		border-top-color: $color;
+		border-width: $size + px;
+	}
+}
+@mixin arrow-left($position: 15,$size: 20,$color: #666666) {
+	position: relative;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: $position + px;
+		margin-left: -$size + px;
+		right: 100%;
+		width: 0px;
+		height: 0px;
+		border: solid transparent;
+		border-top-color: $color;
+		border-right-color: $color;
+		border-width: $size + px;
+	}
+}
+
+
+/*************** テーブル風リスト ****************/
+@mixin tbl-list($th-width: 180,$th-bg: #eeeeee,$td-bg: #ffffff) {
+	width: 100%;
+	&__tr {
+		display: flex;
+		flex-wrap: wrap;
+		border-top: 1px solid #cccccc;
+		&:last-child {
+			border-bottom: 1px solid #cccccc;
+		}
+		@include media(sp) {
+			display: block;
+			border-top: 0;
+			&:last-child {
+				border-bottom: 0;
+			}
+		}
+	}
+	&__th,
+	&__td {
+		overflow: hidden;
+		word-wrap: break-word;
+		word-break: break-all;
+	}
+	&__th {
+		padding: 15px;
+		width: $th-width + px;
+		background: $th-bg;
+		vertical-align: top;
+		@include media(sp) {
+			padding: 5px 15px;
+			width: auto;
+			text-align: left;
+		}
+	}
+	&__td {
+		flex: 1;
+		padding: 15px;
+		background: $td-bg;
+		@include media(sp) {
+			padding: 15px;
+		}
+	}
+}

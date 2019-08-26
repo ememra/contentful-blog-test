@@ -1,0 +1,40 @@
+/*********************************************/
+/* Components title */
+/*********************************************/
+.c-ttl-main {
+	margin-bottom: 30px;
+	font-size: rem(48px);
+	font-weight: 900;
+	font-style: italic;
+	color: #000000;
+	text-align: center;
+}
+
+.c-ttl-sub {
+	position: relative;
+	margin-bottom: 30px;
+	font-size: rem(24px);
+	font-weight: bold;
+	color: #000000;
+}
+.c-ttl-sub-s {
+	position: relative;
+	margin-bottom: 30px;
+	padding-left: 25px;
+	border-left: 1px solid $main-color;
+	font-size: rem(18px);
+	color: #000000;
+	line-height: 1.4;
+	@include media(sp) {
+		margin-bottom: 20px;
+		padding-left: 15px;
+	}
+}
+.c-lead {
+	margin-bottom: 45px;
+	font-size: rem(18px);
+	line-height: $line-height;
+	text-align: center;
+}
+
+
