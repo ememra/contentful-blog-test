@@ -1,5 +1,5 @@
 <template>
-	<header id="l-header">
+	<header id="l-header" class="test" :class="{'sticky': position > 0}">
 		<h1 class="g-logo">
 			Emura Design Portfolio
 		</h1>
@@ -39,6 +39,24 @@
 	</header>
 </template>
 
+
+
+<script>
+export default {
+  data: function(){
+  	return {
+	    position: 0
+	}
+  },
+  ready: function(){
+    var self = this;
+    document.onscroll = function(e){
+      self.position = document.documentElement.scrollTop || document.body.scrollTop;
+    }
+  }
+}
+
+</script>
 
 
 <style lang="scss">
