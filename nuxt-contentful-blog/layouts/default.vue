@@ -1,5 +1,5 @@
 <template>
-  <div class="l-container">
+  <div class="l-all l-container">
     <Header/>
     <main class="l-main">
 		<nuxt/>

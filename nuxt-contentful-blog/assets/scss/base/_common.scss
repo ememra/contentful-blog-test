@@ -1,4 +1,5 @@
 html {
+	margin-top: 50px;
 	padding: 10px;
 	// scroll-behavior: smooth;
 	background: #949eff; /* Old browsers */
@@ -118,6 +119,13 @@ img {
 }
 
 
+.l-all {
+	&.is-fixed {
+		margin-top: 50px;
+		transition: $transition;
+	}
+}
+
 .l-container {
 	margin-left: auto;
 	margin-right: auto;
@@ -141,8 +149,9 @@ img {
 
 
 .l-contents {
-	padding-top: 45px;
-	padding-bottom: 45px;
+	padding-top: 90px;
+	padding-bottom: 90px;
+	border-bottom: 1px solid $accent-color;
 }
 .l-contents-in {
 	margin-top: 60px;

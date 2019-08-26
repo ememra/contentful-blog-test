@@ -1,8 +1,10 @@
 <template>
 	<div>
-		<p>
-			Welcome to the website, thank you!
-		</p>
+		<div class="p-top-message">
+			<p class="p-top-message__body">
+				Welcome to the website, thank you!
+			</p>
+		</div>
 		<section class="p-profile l-contents l-container-s">
 			<h2 class="c-ttl-main">
 				Profile
@@ -83,6 +85,20 @@ export default {
 
 
 <style lang="scss">
+.p-top-message {
+	padding-top: 15px;
+}
+.p-top-message__body {
+	padding-top: 150px;
+	padding-bottom: 150px;
+	border-radius: $radius;
+	font-size: 30px;
+	font-weight: 900;
+	background: $main-color;
+	color: #ffffff;
+	font-style: italic;
+	text-align: center;
+}
 .p-profile-intro {
 	display: flex;
 	flex-wrap: wrap;
