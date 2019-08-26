@@ -1,7 +1,7 @@
 <template>
 	<header id="l-header" class="test" :class="{'sticky': position > 0}">
 		<h1 class="g-logo">
-			Emura Design Portfolio
+			Emura Design Portfolio{{title}}
 		</h1>
 		<nav class="g-main-navi">
 			<button class="g-main-navi-btn js-main-navi-btn" aria-controls="menu">
@@ -45,13 +45,13 @@
 export default {
   data: function(){
   	return {
-	    position: 0
+	    position: 0,
+	    title:'Hello',
 	}
   },
   ready: function(){
-    var self = this;
     document.onscroll = function(e){
-      self.position = document.documentElement.scrollTop || document.body.scrollTop;
+      this.position = document.documentElement.scrollTop || document.body.scrollTop;
     }
   }
 }
