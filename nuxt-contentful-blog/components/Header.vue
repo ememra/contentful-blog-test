@@ -5,11 +5,13 @@
 				Emura Design Portfolio
 			</h1>
 			<nav class="g-main-navi">
-				<button class="g-main-navi-btn js-main-navi-btn" aria-controls="menu">
-					<img src="{gl.top}/images/menu-btn-sp-l.svg" alt="メニュー" width="100%" />
+				<button class="g-main-navi-btn" @click="naviOpen" :class="{'is-active': active}" aria-controls="g-menu" aria-label="メニュー">
+					<span></span>
+					<span></span>
+					<span></span>
 				</button>
 
-				<div class="g-main-navi-wrap js-main-navi" id="g-menu">
+				<div class="g-main-navi-wrap js-main-navi" id="g-menu" :class="{'is-active': navi}">
 					<ul class="g-main-navi-list">
 						<li class="g-main-navi-list__item">
 							<nuxt-link to="/" active-class="is-active" class="g-main-navi-list__link" exact>
@@ -44,6 +46,20 @@
 
 
 <script>
+export default {
+	data: function() {
+		return {
+			active: false,
+			navi: false,
+		}
+	},
+	methods: {
+		naviOpen: function() {//@clickしたとき実行される。それぞれの真偽値を逆にする
+			this.active = !this.active;
+			this.navi = !this.navi;
+		}
+	}
+}
 // export default {
 //   data: function(){
 //   	return {
