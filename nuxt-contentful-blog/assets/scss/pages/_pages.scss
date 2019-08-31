@@ -1,0 +1,57 @@
+/*********************************************/
+/* Pages profile */
+/*********************************************/
+.p-profile-intro {
+	display: flex;
+	flex-wrap: wrap;
+	@include media(sp) {
+		display: block;
+	}
+}
+.p-profile-intro__img {
+	width: 180px;
+	@include media(sp) {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 30px;
+	}
+	& img {
+		border-radius: 50%;
+	}
+}
+.p-profile-intro__txt {
+	flex: 1;
+	margin-left: 60px;
+	line-height: $line-height;
+	@include media(sp) {
+		margin-left: 0;
+	}
+}
+.p-profile-intro__name {
+	font-weight: bold;
+	font-size: rem(21px);
+}
+.p-profile-intro__job {
+	color: $txt-sub;
+}
+.p-profile-intro__birth {
+	color: $txt-sub;
+}
+.p-profile-intro__body {
+	margin-top: 15px;
+}
+
+
+
+
+.p-history__term {
+	display: inline-block;
+	margin-top: 5px;
+	padding: 0px 10px;
+	background: #dddddd;
+	border-radius: $radius-s;
+	font-size: rem(14px);
+	font-weight: normal;
+	color: $txt-sub;
+	text-align: center;
+}

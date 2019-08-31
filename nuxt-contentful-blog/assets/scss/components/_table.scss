@@ -204,29 +204,59 @@
 .c-tbl {
 	width: 100%;
 	@include media(sp) {
-		font-size: rem(12px);
+		display: block;
+	}
+	& tbody {
+		@include media(sp) {
+			display: block;
+		}
+	}
+}
+.c-tbl__tr {
+	@include media(sp) {
+		display: block;
+		padding: 15px 0;
+		border-top: 1px solid $border-color;
 	}
 }
 .c-tbl__th {
-	padding: 10px 20px;
-	border-top: 1px solid #cccccc;
-	border-bottom: 1px solid #cccccc;
-	background: $base-color2;
-	width: 165px;
+	padding: 10px 0px;
+	border-top: 1px solid $border-color;
+	border-bottom: 1px solid $border-color;
+	width: 180px;
+	line-height: $line-height;
 	vertical-align: top;
 	@include media(sp) {
-		padding: 5px 10px;
-		width: 105px;
+		display: block;
+		margin-bottom: 10px;
+		padding: 0;
+		border: none;
+		font-weight: bold;
+		width: auto;
 	}
 }
 .c-tbl__td {
-	padding: 10px 20px;
+	padding: 10px 0px;
 	border-top: 1px solid #cccccc;
 	border-bottom: 1px solid #cccccc;
 	background: #ffffff;
+	line-height: $line-height;
 	@include media(sp) {
-		padding: 5px 10px;
+		display: block;
+		padding: 0;
+		border: 0;
 	}
 }
+
+.c-tbl__ttl {
+	font-weight: bold;
+}
+
+.c-tbl__body {
+	font-size: rem(14px);
+}
+
+
+
 
 

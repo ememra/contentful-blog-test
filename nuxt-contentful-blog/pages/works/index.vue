@@ -27,6 +27,11 @@ import {createClient} from '~/plugins/contentful.js'
 const client = createClient()
 
 export default {
+  head() {
+    return {
+      title: '制作実績',
+    }
+  },
   transition: 'slide-left',
   components: {
     Card

@@ -11,7 +11,8 @@ const pkg = require('./package')
 
 const config = {
  head: {
-   title: 'nuxt_page',
+   title: 'Emura Design Portfolio',
+   titleTemplate: '%s｜Emura Design Portfolio',
    meta: [
      { charset: 'utf-8' },
      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -59,6 +60,7 @@ const config = {
  },
  modules: [
    '@nuxtjs/style-resources',
+   'nuxt-fontawesome',
  ],
   styleResources: {
     scss: [
@@ -69,6 +71,18 @@ const config = {
     google: {
       families: ['Roboto']
     }
+  },
+   fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      },
+      {
+        set: '@fortawesome/free-regular-svg-icons',
+        icons: ['far']
+      },
+    ]
   },
 }
 module.exports = config
