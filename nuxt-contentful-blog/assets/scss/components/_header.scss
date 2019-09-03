@@ -7,12 +7,15 @@
 	left: 0;
 	right: 0;
 	z-index: 10;
-	background: #ffffff;
+	background: rgba(#ffffff, 0.8);
+	backdrop-filter: saturate(180%) blur(20px);
 	height: 60px;
 	box-shadow: 0 0 5px rgba(0,0,0,0.2);
 	@include media(sp) {
 		height: auto;
 		min-height: 60px;
+		background: rgba(#ffffff, 0.9);
+		backdrop-filter: none;
 	}
 }
 .l-header-in {
@@ -61,7 +64,8 @@
 			top: 0;
 			left: 0;
 			z-index: 100;
-			background: rgba($main-color,0.95);
+			background: rgba($main-color,0.8);
+			backdrop-filter: saturate(180%) blur(20px);
 			height: 100%;
 			width: 100%;
 		}
