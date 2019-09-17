@@ -1,25 +1,24 @@
 <template>
 	<section class="p-works l-contents">
-		<h2 class="c-ttl-main">
-			Works
-		</h2>
-		<section class="l-contents-in">
-			<h3 class="c-ttl-sub">
+		<article class="p-works-main">
+			<h2 class="c-ttl-sub">
 				{{ post.fields.title }}
-			</h3>
-			<div class="p-works-main">
+			</h2>
+			<div class="p-works-main__img">
 				<img v-bind:src="post.fields.image.fields.file.url" />
 				<!-- <img v-bind:src="post.fields.image2.fields.file.url" /> -->
 			</div>
-			<vue-markdown>
-				{{post.fields.body}}
-			</vue-markdown>
-			<div class="c-more">
-				<nuxt-link to="/works/" class="c-btn">
-					Works
-				</nuxt-link>
+
+			<div class="p-works-main__body" v-html="$md.render(post.fields.body)">
 			</div>
-		</section>
+
+		</article>
+
+		<div class="c-more">
+			<nuxt-link to="/works/" class="c-btn">
+				Works
+			</nuxt-link>
+		</div>
 <!-- 		<aside class="l-contents-in">
 			<h3 class="c-ttl-sub">
 				その他の制作実績
