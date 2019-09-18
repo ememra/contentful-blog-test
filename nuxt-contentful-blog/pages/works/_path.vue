@@ -1,12 +1,17 @@
 <template>
 	<section class="p-works l-contents">
 		<article class="p-works-main">
-			<h2 class="c-ttl-sub">
-				{{ post.fields.title }}
-			</h2>
 			<div class="p-works-main__img">
 				<img v-bind:src="post.fields.image.fields.file.url" />
 				<!-- <img v-bind:src="post.fields.image2.fields.file.url" /> -->
+			</div>
+			<h2 class="p-works__ttl c-ttl-sub">
+				{{ post.fields.title }}
+			</h2>
+			<div class="p-works__ttl">
+				<a v-bind:href="post.fields.url" target="_blank" rel="nofollow">
+					<font-awesome-icon :icon="['fas','desktop']" /> {{ post.fields.url }}
+				</a>
 			</div>
 
 			<div class="p-works-main__body" v-html="$md.render(post.fields.body)">

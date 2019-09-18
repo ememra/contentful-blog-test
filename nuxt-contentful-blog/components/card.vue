@@ -8,9 +8,9 @@
 				<h3 class="p-works-list__ttl">
 					{{ title }}
 				</h3>
-				<p class="p-works-list__body">
+<!-- 				<p class="p-works-list__body">
 					{{body}}
-				</p>
+				</p> -->
 			</div>
 		</nuxt-link>
 	</li>
@@ -19,6 +19,6 @@
 
 <script>
 export default {
- props: ['title', 'path', 'image', 'body']
+ props: ['title', 'path', 'image', 'body','url']
 }
 </script>

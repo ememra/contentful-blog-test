@@ -5,15 +5,17 @@
 				Welcome to the website, thank you!
 			</p>
 		</div>
-		<section class="p-profile l-contents l-container-s">
-			<h2 class="c-ttl-main">
-				Profile
-			</h2>
-			<profile />
-			<div class="c-more">
-				<nuxt-link to="/profile/" class="c-btn">
+		<section class="p-profile l-contents">
+			<div class="l-container-s">
+				<h2 class="c-ttl-main">
 					Profile
-				</nuxt-link>
+				</h2>
+				<profile />
+				<div class="c-more">
+					<nuxt-link to="/profile/" class="c-btn">
+						Profile
+					</nuxt-link>
+				</div>
 			</div>
 		</section>
 		<section class="p-works l-contents">
@@ -75,17 +77,12 @@ export default {
 
 
 <style lang="scss">
-.p-top-message {
-	padding-top: 15px;
-}
 .p-top-message__body {
-	padding-top: 150px;
-	padding-bottom: 150px;
-	border-radius: $radius;
-	font-size: 30px;
+	padding-top: 180px;
+	margin-bottom: 60px;
+	font-size: rem(48px);
 	font-weight: 900;
-	background: $main-color;
-	color: #ffffff;
+	color: $main-color;
 	font-style: italic;
 	text-align: center;
 }
@@ -98,22 +95,26 @@ export default {
 	margin-right: -15px;
 }
 .p-works-list__item {
+	margin-bottom: 30px;
 	padding-left: 15px;
 	padding-right: 15px;
-	width: 33.3333%;
+	width: 50%;
 }
 .p-works-list__link {
 	display: block;
 	overflow: hidden;
 	border-radius: $radius;
-	background: #f5f5f5;
+	background: #ffffff;
+	box-shadow: $shadow-light;
 	&:hover {
 		box-shadow: $shadow;
 		text-decoration: none;
+		transform: scale(1.02);
 	}
 }
 .p-works-list__txt {
 	padding: 20px;
+	border-top: 1px solid #eeeeee;
 }
 .p-works-list__ttl {
 	font-size: rem(21px);
