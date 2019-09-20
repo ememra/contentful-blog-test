@@ -30,11 +30,11 @@
 								Works
 							</nuxt-link>
 						</li>
-						<li class="g-main-navi-list__item">
+<!-- 						<li class="g-main-navi-list__item">
 							<nuxt-link to="/thinking/" @click.native="naviOpen" active-class="is-active" class="g-main-navi-list__link" exact>
 								Thinking
 							</nuxt-link>
-						</li>
+						</li> -->
 					</ul>
 <!-- 					<button class="g-main-navi-btn-close js-main-navi-btn-close">
 						<img src="{gl.top}/images/icon-close.svg" alt="" width="15" height="15" /> close

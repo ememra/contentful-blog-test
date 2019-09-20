@@ -48,10 +48,61 @@
 	display: inline-block;
 	margin-top: 5px;
 	padding: 0px 10px;
-	background: #dddddd;
+	background: #eeeeee;
 	border-radius: $radius-s;
-	font-size: rem(14px);
+	font-size: rem(12px);
 	font-weight: normal;
 	color: $txt-sub;
 	text-align: center;
 }
+
+
+
+
+.p-skill-list__item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid $border-color;
+	&:first-child {
+		border-top: 1px solid $border-color;
+	}
+}
+.p-skill-list__icon {
+	margin-right: 15px;
+	width: 45px;
+	text-align: center;
+	font-size: 36px;
+	color: $main-color;
+	& img {
+		vertical-align: middle;
+	}
+}
+.p-skill-list__ttl {
+	margin-right: 30px;
+	width: 120px;
+}
+.p-skill-list__ttl-name {
+	font-weight: bold;
+}
+.p-skill-list__ttl-star {
+	font-size: rem(14px);
+	color: #e4a600;
+}
+.p-skill-list__body {
+	flex: 1;
+}
+
+
+
+
+.p-personality-box {
+	margin-bottom: 60px;
+}
+.p-personality-box__body {
+	line-height: $line-height;
+}
+
+

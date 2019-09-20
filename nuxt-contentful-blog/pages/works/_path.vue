@@ -52,7 +52,11 @@ import {createClient} from '~/plugins/contentful.js'
 const client = createClient()
 
 export default {
- transition: 'slide-left',
+  head() {
+    return {
+      title: '制作実績詳細',
+    }
+  },
  components: {
    Card,
    VueMarkdown,
