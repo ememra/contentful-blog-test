@@ -13,7 +13,7 @@ body {
 	min-width: 1050px;
 	font-size: $font-size-pc;
 	font-family: $gothic;
-	background: $base-color;
+	background: rgba($base-color, 0.9);
 	color: $txt-main;
 	word-wrap: break-word;
 	letter-spacing: 0.05em;

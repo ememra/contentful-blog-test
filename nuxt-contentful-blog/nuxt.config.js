@@ -47,7 +47,7 @@ const config = {
        'content_type': ctfConfig.CTF_PAGE_TYPE_ID
      }).then(entries => {
        return [
-         ...entries.items.map(entry => `/page/${entry.fields.path}`)
+         ...entries.items.map(entry => `/works/${entry.fields.path}`)
        ]
      })
    },
