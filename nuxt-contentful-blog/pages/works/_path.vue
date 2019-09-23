@@ -5,16 +5,16 @@
 				<img v-bind:src="post.fields.image.fields.file.url" />
 				<!-- <img v-bind:src="post.fields.image2.fields.file.url" /> -->
 			</div>
-			<h2 class="p-works__ttl c-ttl-sub">
+			<h2 class="p-works-main__ttl c-ttl-sub">
 				{{ post.fields.title }}
 			</h2>
-			<div class="p-works__ttl">
+			<div class="p-works-main__link">
 				<a v-bind:href="post.fields.url" target="_blank" rel="nofollow">
 					<font-awesome-icon :icon="['fas','desktop']" /> {{ post.fields.url }}
 				</a>
 			</div>
 
-			<div class="p-works-main__body" v-html="$md.render(post.fields.body)">
+			<div class="p-works-main__body js-md-contents" v-html="$md.render(post.fields.body)">
 			</div>
 
 		</article>

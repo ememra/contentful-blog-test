@@ -18,7 +18,6 @@ body {
 	word-wrap: break-word;
 	letter-spacing: 0.05em;
 	@include media(sp) {
-		margin-bottom: 90px;
 		min-width: 320px;
 		font-size: $font-size-sp;
 		-webkit-text-size-adjust: 100%;

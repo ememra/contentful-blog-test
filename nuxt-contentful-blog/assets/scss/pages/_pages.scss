@@ -1,4 +1,128 @@
 /*********************************************/
+/* Pages works */
+/*********************************************/
+.p-works-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -15px;
+	margin-right: -15px;
+	@include media(sp) {
+		display: block;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+.p-works-list__item {
+	margin-bottom: 30px;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 50%;
+	@include media(sp) {
+		padding-left: 0px;
+		padding-right: 0px;
+		width: auto;
+	}
+}
+.p-works-list__link {
+	display: block;
+	overflow: hidden;
+	border-radius: $radius;
+	background: #ffffff;
+	box-shadow: $shadow-light;
+	&:hover {
+		box-shadow: $shadow;
+		text-decoration: none;
+		transform: scale(1.02);
+	}
+}
+.p-works-list__txt {
+	padding: 20px;
+	border-top: 1px solid #eeeeee;
+	@include media(sp) {
+		padding: 10px;
+	}
+}
+.p-works-list__ttl {
+	font-size: rem(21px);
+	font-weight: bold;
+	color: #000000;
+	@include media(sp) {
+		font-size: rem(18px);
+	}
+}
+.p-works-list__body {
+	margin-top: 10px;
+	color: $txt-main;
+}
+
+
+
+.p-works-main__img {
+	margin-bottom: 60px;
+	box-shadow: $shadow;
+}
+.p-works-main__ttl {
+	font-size: rem(36px);
+	font-weight: bold;
+	@include media(sp) {
+		font-size: rem(30px);
+	}
+}
+.p-works-main__body {
+	margin-top: 90px;
+	margin-bottom: 60px;
+	padding-top: 90px;
+	position: relative;
+	@include media(sp) {
+		margin-top: 60px;
+		padding-top: 60px;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -60px;
+		width: 120px;
+		height: 2px;
+		background: $accent-color;
+	}
+}
+.js-md-contents {
+	& h1 {
+		margin-bottom: 30px;
+		margin-top: 30px;
+		font-size: rem(30px);
+		font-weight: bold;
+	}
+	& h2 {
+		margin-bottom: 30px;
+		margin-top: 30px;
+		font-size: rem(24px);
+		font-weight: bold;
+	}
+	& h3 {
+		margin-bottom: 30px;
+		margin-top: 30px;
+		font-size: rem(18px);
+		font-weight: bold;
+	}
+	& p {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		line-height: $line-height;
+	}
+	& img {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		max-width: 100%;
+		box-shadow: $shadow;
+		text-align: center;
+	}
+}
+
+
+/*********************************************/
 /* Pages profile */
 /*********************************************/
 .p-profile-intro {
@@ -93,6 +217,11 @@
 }
 .p-skill-list__body {
 	flex: 1;
+	@include media(sp) {
+		flex: inherit;
+		margin-top: 15px;
+		width: 100%;
+	}
 }
 
 

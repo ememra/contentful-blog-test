@@ -85,47 +85,12 @@ export default {
 	color: $main-color;
 	font-style: italic;
 	text-align: center;
-}
-
-
-.p-works-list {
-	display: flex;
-	flex-wrap: wrap;
-	margin-left: -15px;
-	margin-right: -15px;
-}
-.p-works-list__item {
-	margin-bottom: 30px;
-	padding-left: 15px;
-	padding-right: 15px;
-	width: 50%;
-}
-.p-works-list__link {
-	display: block;
-	overflow: hidden;
-	border-radius: $radius;
-	background: #ffffff;
-	box-shadow: $shadow-light;
-	&:hover {
-		box-shadow: $shadow;
-		text-decoration: none;
-		transform: scale(1.02);
+	@include media(sp) {
+		padding-top: 60px;
+		margin-bottom: 0px;
+		font-size: rem(36px);
 	}
 }
-.p-works-list__txt {
-	padding: 20px;
-	border-top: 1px solid #eeeeee;
-}
-.p-works-list__ttl {
-	font-size: rem(21px);
-	font-weight: bold;
-	color: #000000;
-}
-.p-works-list__body {
-	margin-top: 10px;
-	color: $txt-main;
-}
-
 </style>
 
 

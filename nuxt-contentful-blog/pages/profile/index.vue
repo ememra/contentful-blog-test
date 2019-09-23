@@ -81,7 +81,7 @@
 					</tr>
 					<tr class="c-tbl__tr">
 						<th class="c-tbl__th">
-							2014～2019年
+							2014年～
 							<div class="p-history__term">
 								勤続年数：5年
 							</div>
@@ -302,7 +302,7 @@
 					好きなもの・趣味
 				</h4>
 				<p class="p-personality-box__body">
-					ギター。インターネット。地味な作業。
+					ギター。インターネット。アニメ。地味な作業。
 				</p>
 			</div>
 			<div class="p-personality-box">
@@ -310,7 +310,7 @@
 					苦手なもの
 				</h4>
 				<p class="p-personality-box__body">
-					電話。梅干し。口の悪い人。
+					電話。梅干し。
 				</p>
 			</div>
 			<div class="p-personality-box">

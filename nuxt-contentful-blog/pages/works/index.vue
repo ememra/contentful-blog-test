@@ -4,7 +4,7 @@
 			Works
 		</h2>
 		<p class="c-lead">
-			今までに関わった制作案件、趣味作品などをピックアップ
+			今までに携わった制作案件をピックアップしました
 		</p>
 		<ul class="p-works-list">
 			<card v-for="post in posts"

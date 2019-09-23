@@ -17,9 +17,6 @@
 	text-decoration: none;
 	transition: $transition;
 	@include arrow-link-right(20,10,2,$main-color);
-	@include media(sp) {
-		min-width: 290px;
-	}
 	&:hover {
 		border-color:$accent-color;
 		background-color: transparent;
