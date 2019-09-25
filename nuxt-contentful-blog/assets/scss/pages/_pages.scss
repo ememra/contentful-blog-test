@@ -69,24 +69,19 @@
 	}
 }
 .p-works-main__body {
-	margin-top: 90px;
+	margin-top: 30px;
 	margin-bottom: 60px;
-	padding-top: 90px;
 	position: relative;
-	@include media(sp) {
-		margin-top: 60px;
-		padding-top: 60px;
-	}
-	&:before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 50%;
-		margin-left: -60px;
-		width: 120px;
-		height: 2px;
-		background: $accent-color;
-	}
+	// &:before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 50%;
+	// 	margin-left: -60px;
+	// 	width: 120px;
+	// 	height: 2px;
+	// 	background: $accent-color;
+	// }
 }
 .js-md-contents {
 	& h1 {
@@ -118,6 +113,18 @@
 		max-width: 100%;
 		box-shadow: $shadow;
 		text-align: center;
+	}
+	& ul {
+		margin-bottom: 30px;
+	}
+	& li {
+		display: inline-block;
+		margin-right: 3px;
+		margin-bottom: 5px;
+		padding: 3px 10px;
+		border-radius: 2px;
+		font-size: rem(12px);
+		background: rgba($main-color, 0.5);
 	}
 }
 

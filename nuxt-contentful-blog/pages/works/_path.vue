@@ -9,9 +9,9 @@
 				{{ post.fields.title }}
 			</h2>
 			<div class="p-works-main__link">
-				<a v-bind:href="post.fields.url" target="_blank" rel="nofollow">
-					<font-awesome-icon :icon="['fas','desktop']" /> {{ post.fields.url }}
-				</a>
+				<font-awesome-icon :icon="['fas','desktop']" /> {{ post.fields.url }}
+<!-- 				<a v-bind:href="post.fields.url" target="_blank" rel="nofollow">
+				</a> -->
 			</div>
 
 			<div class="p-works-main__body js-md-contents" v-html="$md.render(post.fields.body)">
