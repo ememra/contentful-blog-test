@@ -323,6 +323,17 @@
 			</div>
 			<div class="p-personality-box">
 				<h4 class="c-ttl-sub-s">
+					Webについて考えていること
+				</h4>
+				<p class="p-personality-box__body">
+					「アクセスできること」を一番大切にしています。<br />
+					いかに素晴らしいコンテンツがあったとしても、そこにたどり着けない人がいたり、使うのが難しい人がいることがあります。<br />
+					それは生まれ持った体質や年齢であったり、怪我や病気などの状態、利用される環境など多くのことを考慮せねばなりません。<br />
+					その障壁を少なくし、「使いにくい、使えない」を「使いやすい、使える」状態にすることがWebにおいてとても重要なことであると思っています。
+				</p>
+			</div>
+			<div class="p-personality-box">
+				<h4 class="c-ttl-sub-s">
 					デザインについて考えていること
 				</h4>
 				<p class="p-personality-box__body">
@@ -333,7 +344,7 @@
 			</div>
 			<div class="p-personality-box">
 				<h4 class="c-ttl-sub-s">
-					心がけていること
+					仕事で心がけていること
 				</h4>
 				<p class="p-personality-box__body">
 					自分の得意分野と隣り合う技術について知識や理解を深める。<br />
