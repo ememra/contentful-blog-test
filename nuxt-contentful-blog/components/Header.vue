@@ -31,8 +31,8 @@
 							</nuxt-link>
 						</li>
 						<li class="g-main-navi-list__item">
-							<nuxt-link to="/business-card/" @click.native="naviOpen" active-class="is-active" class="g-main-navi-list__link" exact>
-								Card
+							<nuxt-link to="/thinking/" @click.native="naviOpen" active-class="is-active" class="g-main-navi-list__link" exact>
+								Thinking
 							</nuxt-link>
 						</li>
 <!-- 						<li class="g-main-navi-list__item">

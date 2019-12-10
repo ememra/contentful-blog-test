@@ -4,7 +4,7 @@
 			Profile
 		</h2>
 		<p class="c-lead">
-			職務経歴、スキル・資格、趣味・性格などの自己紹介
+			職務経歴、スキル・資格を紹介します。
 		</p>
 		<section class="l-contents-in l-container-s">
 			<profile />
@@ -108,7 +108,7 @@
 			<h3 class="c-ttl-sub">
 				スキル・資格
 			</h3>
-			<ul class="p-skill-list">
+			<ul class="p-skill-list u-mbm">
 <!-- 				<li class="p-skill-list__item">
 					<div class="p-skill-list__icon">
 						<img src="~/assets/images/icon-ai.svg" alt="Webデザイン" width="100%" />
@@ -290,6 +290,37 @@
 					</div>
 				</li>
 			</ul>
+			<div class="p-personality-box">
+				<h4 class="c-ttl-sub-s">
+					できる・得意なこと
+				</h4>
+				<p class="p-personality-box__body">
+					HTML/CSSを書くのが好きで、仕事ではマークアップ、CSS設計をしています。<br />
+					デザインはシンプルで、親しみやすさを考えられたものが好きで、サイトを訪れるユーザーの行動を考えてサイトを設計することにやりがいを感じます。<br />
+					アクセシビリティの興味があり、デザインするとき、コードを書くときに心がけています。<br />
+					イラストは描けませんが、Illustratorでベクターを使ったイラストであれば作ることが来ます。
+				</p>
+			</div>
+			<div class="p-personality-box">
+				<h4 class="c-ttl-sub-s">
+					できない・苦手なこと
+				</h4>
+				<p class="p-personality-box__body">
+					デザインはグラフィカルで装飾的、広告的なものを作るのは苦手です。<br />
+					JavascriptやPHPはライブラリやフレームワークを使うことは好きですが、自力では簡単なものしか書くことができません。
+				</p>
+			</div>
+			<div class="p-personality-box">
+				<h4 class="c-ttl-sub-s">
+					やりたいこと
+				</h4>
+				<p class="p-personality-box__body">
+					チームで相談、改善しながら、納得を持ってサイトやサービスを作り上げていきたい。<br />
+					ユーザーや企業の利益に還元できる仕事をしたい。<br />
+					技術共有や勉強会に積極的に参加したい。デザインからフロントエンドまで幅広く知識をつけたい。<br />
+				</p>
+			</div>
+
 		</section>
 
 
@@ -321,44 +352,23 @@
 					人としゃべるのは得意な方ではありませんが、webの特性上、画面上だけでどれだけコミュニケーションが完結できるのかを意識してサイト制作に取り組んでいます。
 				</p>
 			</div>
-			<div class="p-personality-box">
-				<h4 class="c-ttl-sub-s">
-					Webについて考えていること
-				</h4>
-				<p class="p-personality-box__body">
-					「アクセスできること」を一番大切にしています。<br />
-					いかに素晴らしいコンテンツがあったとしても、そこにたどり着けない人がいたり、使うのが難しい人がいることがあります。<br />
-					ユーザーの中には<br />
-					・怪我や病気などでうまく体をうごかせない<br />
-					・生まれ持った体質や年齢などで目が見えない・見にくい、炎天下でディスプレイが見えにくい<br />
-					・外で音を出せない、耳が悪く音が聞こえない<br />
-					などなど、多くの状態・状況があります。<br />
-					Webサイトを作る上でそれらのことを考慮せねばなりません。<br />
-					その障壁を少なくし、「使いにくい、使えない」を「使いやすい、使える」状態にすることがWebにおいてとても重要なことだと思っています。<br />
-					それらは障害を持っている人だけではなく、自分にとっても使いやすいものとなります。
-				</p>
-			</div>
-			<div class="p-personality-box">
-				<h4 class="c-ttl-sub-s">
-					デザインについて考えていること
-				</h4>
-				<p class="p-personality-box__body">
-					人をハッと驚かせるものよりも、地味だけど誰しもが使いやすく迷わないデザインが好きです。<br />
-					「誰のためのデザイン」を読み、デザインの捉え方が大きく変わりました。使いにくい物があったとき、それは人が悪いのではなく、デザインが悪い。<br />
-					一度ユーザビリティテストを行ったことがありますが、多くのユーザーの前ではきらびやかな装飾よりも堅実で迷わないレイアウトやライティング、サイト設計が重要ということに気付かされました。
-				</p>
-			</div>
-			<div class="p-personality-box">
-				<h4 class="c-ttl-sub-s">
-					仕事で心がけていること
-				</h4>
-				<p class="p-personality-box__body">
-					自分の得意分野と隣り合う技術について知識や理解を深める。<br />
-					例えば自分はHTML/CSSを書くことが得意ですが、デザインやプログラミングの仕組みを理解して制作に取り組むよう心がけています。
-				</p>
-			</div>
-
 		</section>
+
+
+		<section class="p-personality l-contents-in l-container-s">
+			<h3 class="c-ttl-sub">
+				名刺
+			</h3>
+			<div class="card-item" :class="{'is-active': isActive}" @click="cardFlip">
+				<div class="card-item__side -front">
+					<img src="~/assets/images/business-card-01.jpg" class="card-item__bg" alt="名刺表" />
+				</div>
+				<div class="card-item__side -back">
+					<img src="~/assets/images/business-card-02.jpg" class="card-item__bg" alt="名刺裏" />
+				</div>
+			</div>
+		</section>
+
 	</section>
 </template>
 
@@ -372,14 +382,24 @@ import {createClient} from '~/plugins/contentful.js'
 const client = createClient()
 
 export default {
-  head() {
-    return {
-      title: 'プロフィール',
-    }
-  },
-  components :{
-  	Profile,
-  }
+	head() {
+		return {
+			title: 'プロフィール',
+		}
+	},
+	data: function() {
+		return {
+			isActive: false,
+		}
+	},
+	methods: {
+		cardFlip: function() {//@clickしたとき実行される。それぞれの真偽値を逆にする
+			this.isActive = !this.isActive;
+		}
+	},
+	components :{
+		Profile,
+	}
 }
 </script>
 
