@@ -4,7 +4,7 @@
 			Profile
 		</h2>
 		<p class="c-lead">
-			職務経歴、スキル・資格を紹介します。
+			職務経歴、スキル・資格を紹介します
 		</p>
 		<section class="l-contents-in l-container-s">
 			<profile />

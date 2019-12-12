@@ -25,10 +25,13 @@
 	color: #000000;
 }
 .c-lead {
-	margin-bottom: 45px;
+	margin-bottom: 90px;
 	font-size: rem(18px);
 	line-height: $line-height;
 	text-align: center;
+	@include media(sp) {
+		margin-bottom: 45px;
+	}
 }
 
 
