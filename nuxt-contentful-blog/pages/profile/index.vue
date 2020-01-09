@@ -58,6 +58,7 @@
 							</h4>
 							<p class="c-tbl__body">
 								Webデザイナー 正社員として勤務。<br />
+								・PHPの独自フレームワークを使ったCMSテンプレート制作<br />
 								後に、株式会社KPSのWeb部門となり移籍
 							</p>
 						</td>
@@ -75,6 +76,7 @@
 							</h4>
 							<p class="c-tbl__body">
 								Webデザイナー 正社員として勤務。<br />
+								・CMSを利用した中小規模のWebサイト制作<br />
 								後に、Web部門が株式会社ズコーデザインとして独立
 							</p>
 						</td>
@@ -92,8 +94,9 @@
 							</h4>
 							<p class="c-tbl__body">
 								Webデザイナー 正社員として勤務。<br />
-								・Webサイトのテンプレート制作<br />
+								・Webサイトのテンプレート制作・管理<br />
 								・マークアップ<br />
+								・CSS設計<br />
 								・デザイン<br />
 								・ワイヤーフレーム設計など
 							</p>
@@ -286,7 +289,7 @@
 						</div>
 					</div>
 					<div class="p-skill-list__body">
-						運転は苦手…
+						運転は苦手。
 					</div>
 				</li>
 			</ul>
@@ -297,8 +300,8 @@
 				<p class="p-personality-box__body">
 					HTML/CSSを書くのが好きで、仕事ではマークアップ、CSS設計をしています。<br />
 					デザインはシンプルで、親しみやすさを考えられたものが好きで、サイトを訪れるユーザーの行動を考えてサイトを設計することにやりがいを感じます。<br />
-					アクセシビリティの興味があり、デザインするとき、コードを書くときに心がけています。<br />
-					イラストは描けませんが、Illustratorでベクターを使ったイラストであれば作ることが来ます。
+					アクセシビリティの興味があり、デザインするときやコードを書くときにユーザーがちゃんとアクセスできるのかを心がけています。<br />
+					Illustratorでベクターを利用したイラスト・アイコンを作ることが来ます。
 				</p>
 			</div>
 			<div class="p-personality-box">
@@ -306,8 +309,8 @@
 					できない・苦手なこと
 				</h4>
 				<p class="p-personality-box__body">
-					デザインはグラフィカルで装飾的、広告的なものを作るのは苦手です。<br />
-					JavascriptやPHPはライブラリやフレームワークを使うことは好きですが、自力では簡単なものしか書くことができません。
+					JavascriptやPHPはライブラリやフレームワークを使うことは好きですが、自力では簡単なものしか書くことができません。<br />
+					手書きイラストは描けません。
 				</p>
 			</div>
 			<div class="p-personality-box">
@@ -333,7 +336,7 @@
 					好きなもの・趣味
 				</h4>
 				<p class="p-personality-box__body">
-					ギター。インターネット。アニメ。地味な作業。
+					ギター。DTM。インターネット。アニメ。地味な作業。
 				</p>
 			</div>
 			<div class="p-personality-box">
@@ -341,9 +344,10 @@
 					苦手なもの
 				</h4>
 				<p class="p-personality-box__body">
-					電話。梅干し。
+					電話。梅干し。車の運転。
 				</p>
 			</div>
+			<!--
 			<div class="p-personality-box">
 				<h4 class="c-ttl-sub-s">
 					長所であり短所
@@ -352,9 +356,10 @@
 					人としゃべるのは得意な方ではありませんが、webの特性上、画面上だけでどれだけコミュニケーションが完結できるのかを意識してサイト制作に取り組んでいます。
 				</p>
 			</div>
+			-->
 		</section>
 
-
+		<!--
 		<section class="p-personality l-contents-in l-container-s">
 			<h3 class="c-ttl-sub">
 				名刺
@@ -368,6 +373,7 @@
 				</div>
 			</div>
 		</section>
+		-->
 
 	</section>
 </template>
